@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
+import JobList from './JobList';
+
+
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +21,7 @@ function App() {
         >
           Learn React
         </a>
+         <JobList />
       </header>
     </div>
   );

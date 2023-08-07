@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB (replace 'your-mongodb-uri' with your actual MongoDB connection string)
-mongoose.connect('your-mongodb-uri', {
+mongoose.connect('mongodb+srv://daajill71:<pbzCtYRH2PkcCJk2>@cluster0.y8ly3hw.mongodb.net/?retryWrites=true&w=majority', 
+{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -21,8 +22,9 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-// Define your routes and API endpoints here
-// Example: app.use('/api/salaries', require('./routes/salaries'));
+// Import and use the jobs route
+const jobsRoute = require('./routes/jobs');
+app.use('/api/jobs', jobsRoute);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
