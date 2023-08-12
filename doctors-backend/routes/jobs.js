@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Job = require('../models/Jobs'); // Import your Mongoose model
 
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
   try {
     const jobs = await Job.find();
     res.json(jobs);
