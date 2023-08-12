@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 
 const jobSchema = new mongoose.Schema({
-  title: String,
-  compensation: String,
+  title: {
+   type: String,
+   required: true
+  },
+  compensation: {
+    type: String,
+    required: true
+  }  
   // Other job properties
 });
 
