@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import JobList from './JobList';
+//import JobList from './JobList';
 import JobsTable from './JobsTable';
-import './styles.css'; // Import the CSS file
-import ChartComponent from './ChartComponent'; 
+//import './styles.css'; // Import the CSS file
+//import ChartComponent from './ChartComponent'; 
 
 
 
@@ -24,9 +24,8 @@ function App() {
         >
           Learn React
         </a>
-         <JobList />
-         <JobsTable/>
-         <ChartComponent data={jobs}/>        
+         <JobsTable />
+                
         
       </header>
     </div>

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'https://doctors-level-backend.onrender.com/api/jobs'; // Replace with your backend API base URL
+const API_BASE_URL = 'https://doctors-level-backend.onrender.com'; // Replace with your backend API base URL
 
 const JobsTable = () => {
   const [jobs, setJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get(`${API_BASE_URL}/jobs`)
+    axios.get(`${API_BASE_URL}/api/jobs`)
       .then(response => {
         setJobs(response.data);
       })
@@ -39,10 +39,10 @@ const JobsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredJobs.map(job => (
-            <tr key={job._id}>
-              <td>{job.title}</td>
-              <td>${job.compensation}</td>
+          {filteredJobs.map(jobs => (
+            <tr key={jobs._id}>
+              <td>{jobs.Title}</td>
+              <td>${jobs.Compensation}</td>
             </tr>
           ))}
         </tbody>
