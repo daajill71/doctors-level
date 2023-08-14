@@ -19,7 +19,7 @@ const JobsTable = () => {
 
   // Filter jobs based on the search term
   const filteredJobs = jobs.filter(job =>
-    job.title.toLowerCase().includes(searchTerm.toLowerCase())
+    job.Title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -39,10 +39,10 @@ const JobsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredJobs.map(jobs => (
-            <tr key={jobs._id}>
-              <td>{jobs.Title}</td>
-              <td>${jobs.Compensation}</td>
+          {filteredJobs.map(job => (
+            <tr key={job._id}>
+              <td>{job.title}</td>
+              <td>${job.compensation}</td>
             </tr>
           ))}
         </tbody>
