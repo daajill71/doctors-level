@@ -1,4 +1,4 @@
-const Job = require('./models/Jobs');
+const Job = require('./models/Job');
 const mongoose = require('mongoose'); // Import mongoose directly
 require('dotenv').config();
 const MONGO_URI = process.env.MONGO_URI;
