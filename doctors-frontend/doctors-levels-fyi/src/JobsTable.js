@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api'; // Replace with your backend API base URL
+const API_BASE_URL = 'https://doctors-level-backend.onrender.com/api/jobs'; // Replace with your backend API base URL
 
 const JobsTable = () => {
   const [jobs, setJobs] = useState([]);
