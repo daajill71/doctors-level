@@ -10,7 +10,6 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
-
 // Import and use the jobs route
 const jobsRoute = require('./routes/jobs');
 app.use('/api/jobs', jobsRoute);
