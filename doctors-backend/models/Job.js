@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+const mongoose = require('mongoose');
 const jobSchema = new Schema({
   Title: {
     type: String,
@@ -14,4 +14,4 @@ console.log('Job model initialized'); // Add a console log here
 
 const Job = model('Job', jobSchema);
 
-export default Job;
+module.exports = Job;

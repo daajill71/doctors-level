@@ -1,6 +1,6 @@
-import { Router } from 'express';
-const router = Router();
-import { find } from '../models/Job';
+const express = require('express');
+const router = express.Router();
+const Job = require('../models/Job'); // Import your Mongoose model
 
 router.get('/api/jobs', async (req, res) => {
   try {
@@ -14,4 +14,4 @@ router.get('/api/jobs', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
