@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const Job = require('../models/Job');
+import { Router } from 'express';
+const router = Router();
+import { find } from '../models/Job';
 
 router.get('/api/jobs', async (req, res) => {
   try {
     console.log('Fetching jobs...');
-    const jobs = await Job.find();
+    const jobs = await find();
     console.log('Fetched jobs:', jobs);
     res.json(jobs);
   } catch (error) {
@@ -14,4 +14,4 @@ router.get('/api/jobs', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

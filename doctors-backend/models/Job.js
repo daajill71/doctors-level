@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const jobSchema = new mongoose.Schema({
+import { Schema, model } from 'mongoose';
+const jobSchema = new Schema({
   Title: {
     type: String,
     required: true
@@ -12,6 +12,6 @@ const jobSchema = new mongoose.Schema({
 
 console.log('Job model initialized'); // Add a console log here
 
-const Job = mongoose.model('Job', jobSchema);
+const Job = model('Job', jobSchema);
 
-module.exports = Job;
+export default Job;
