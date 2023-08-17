@@ -16,6 +16,10 @@ const JobsList = () => {
       })
       .catch(error => {
         console.error('Error fetching data:', error);
+        console.log('Error response details:', error.response);
+        console.log('Error status details:', error.response.status);
+        console.log('Error response data:', error.response.data);
+
       });
   }, []);
 

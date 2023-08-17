@@ -4,7 +4,7 @@
 //import './styles.css'; // Import the CSS file
 //import ChartComponent from './ChartComponent'; 
 import './App.css';
-import JobList from './JobList';
+import JobsList from './JobsList';
 import React from 'react';
 
 
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Job Listings</h1>
-        <JobList /> {/* Use the JobsList component */}
+        <JobsList /> {/* Use the JobsList component */}
       </header>
     </div>
   );
