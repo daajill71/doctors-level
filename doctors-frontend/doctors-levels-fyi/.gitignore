@@ -2,7 +2,9 @@
 
 # Ignore the .env file
 .env
-
+Apporiginal.js
+Joblistoriginal.js
+JobsT.js
 # dependencies
 /node_modules
 /.pnp
